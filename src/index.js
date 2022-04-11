@@ -40,3 +40,27 @@ const siteContent = { // DO NOT CHANGE THIS OBJECT
 };
 
 console.log('project wired!')
+
+// selectors
+
+const navItems = document.querySelectorAll("nav a");
+const companyLogo = document.querySelector("#logo-img");
+const h1 = document.querySelector("h1");
+const ctaButton = document.querySelector(".cta-text button")
+const ctaImage = document.querySelector("#cta-img");
+const mainTitles = document.querySelectorAll(".text-content h4");
+const mainPs = document.querySelectorAll(".text-content p");
+const mainImage = document.querySelector("#middle-img")
+const contactTitle = document.querySelector(".contact h4");
+const contactLines = document.querySelectorAll(".contact p")
+const copyright = document.querySelector("footer a");
+
+// work
+
+// const navText = Object.values(siteContent.nav)
+// // console.log(navText);
+
+// navItems.forEach((link, index) =>{
+//   link.textContent = navText[index]
+//   link.classList.add('italic')
+// });
