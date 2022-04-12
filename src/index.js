@@ -48,19 +48,57 @@ const companyLogo = document.querySelector("#logo-img");
 const h1 = document.querySelector("h1");
 const ctaButton = document.querySelector(".cta-text button")
 const ctaImage = document.querySelector("#cta-img");
-const mainTitles = document.querySelectorAll(".text-content h4");
+// const mainTitles = document.querySelectorAll(".text-content h4");
 const mainPs = document.querySelectorAll(".text-content p");
 const mainImage = document.querySelector("#middle-img")
 const contactTitle = document.querySelector(".contact h4");
 const contactLines = document.querySelectorAll(".contact p")
 const copyright = document.querySelector("footer a");
 
+const topContent = document.querySelector(".top-content")
+const botContent = document.querySelector(".bottom-content")
+
 // work
 
-// const navText = Object.values(siteContent.nav)
-// // console.log(navText);
+const navText = Object.values(siteContent.nav)
+// console.log(navText);
 
-// navItems.forEach((link, index) =>{
-//   link.textContent = navText[index]
-//   link.classList.add('italic')
-// });
+navItems.forEach((link, index) =>{
+  link.textContent = navText[index]
+  link.classList.add('italic')
+});
+
+h1.textContent = siteContent.cta.h1;
+ctaButton.textContent = siteContent.cta.button;
+
+topContent.children[0].children[0].textContent = siteContent["main-content"]["features-h4"];
+topContent.children[0].children[1].textContent = siteContent["main-content"]["features-content"];
+topContent.children[1].children[0].textContent = siteContent["main-content"]["about-h4"];
+topContent.children[1].children[1].textContent = siteContent["main-content"]["about-content"];
+
+
+
+botContent.children[0].children[0].textContent = siteContent["main-content"]["services-h4"];
+botContent.children[0].children[1].textContent = siteContent["main-content"]["services-content"];
+botContent.children[1].children[0].textContent = siteContent["main-content"]["product-h4"];
+botContent.children[1].children[1].textContent = siteContent["main-content"]["product-content"];
+botContent.children[2].children[0].textContent = siteContent["main-content"]["vision-h4"];
+botContent.children[2].children[1].textContent = siteContent["main-content"]["vision-content"];
+
+
+companyLogo.src = siteContent.images["logo-img"]
+
+ctaImage.src = siteContent.images["cta-img"]
+
+mainImage.src = siteContent.images["accent-img"]
+
+contactTitle.textContent = siteContent.contact["contact-h4"];
+const contact = document.querySelector('section.contact')
+contact.querySelector('p:nth-of-type(1)').textContent = siteContent.contact["address"]
+contact.querySelector('p:nth-of-type(2)').textContent = siteContent.contact["phone"]
+contact.querySelector('p:nth-of-type(3)').textContent = siteContent.contact["email"]
+
+// footer 
+
+copyright.textContent = siteContent.footer.copyright;
+copyright.classList.add("bold");
